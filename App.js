@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+
+import Ball from "./components/Ball";
 
 class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Advance React-Native Animations</Text>
+        <Ball />
       </View>
     );
   }
@@ -14,9 +16,7 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    justifyContent: "center",
-    alignItems: "center"
+    backgroundColor: "#fff"
   }
 });
 
