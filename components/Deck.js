@@ -4,7 +4,7 @@ import { View, Text, Animated } from "react-native";
 class Deck extends Component {
   renderCards() {
     return this.props.data.map(item => {
-      return this.props.renderCards(item);
+      return this.props.renderCard(item);
     });
   }
 

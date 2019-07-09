@@ -1,5 +1,6 @@
-import React from "react";
-import { StyleSheet, View } from "react-native";
+import React, { Component } from "react";
+import { StyleSheet, View, Text } from "react-native";
+import { Card, Button } from "react-native-elements";
 
 import Deck from "./components/Deck";
 
@@ -49,7 +50,16 @@ const DATA = [
 
 class App extends Component {
   renderCard(item) {
-    return <Text>{item.text}</Text>;
+    return (
+      <Card key={item.id} title={item.text} image={{ uri: item.uri }}>
+        <Text style={{ marginBottom: 10 }}>Hello</Text>
+        <Button
+          icon={{ name: "code" }}
+          backgroundColor="#03A9F4"
+          title="View Now!"
+        />
+      </Card>
+    );
   }
 
   render() {
